@@ -1,0 +1,101 @@
+/* Elimina los márgenes y relleno predeterminados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body, html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth; /* Scroll suave entre secciones */
+    background: linear-gradient(90deg, rgba(24,62,184,1) 0%, rgba(24,62,184,1) 36%, rgba(27,144,166,1) 100%);
+}
+  
+#navigator-bar {
+    display: flex;
+    align-items: center; /* Alinea todos los elementos al centro verticalmente */
+    padding: 20px;
+    position: fixed; /* Fija la barra de navegación en la parte superior */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Asegura que esté siempre encima del contenido */
+}
+  
+#navigator-bar h1 {
+    color: white;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    margin: 0;
+    font-size: 1.5em;
+    line-height: 1;
+}
+  
+#navigator-bar a {
+    color: white;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    text-decoration: none;
+    padding: 0 10px;
+    line-height: 1;
+    margin: 0;
+}
+  
+/* Alinea los enlaces a la derecha */
+#navigator-bar a:first-of-type {
+    margin-left: auto;
+}
+  
+#navigator-bar a:hover {
+    text-decoration: underline;
+    font-weight: bolder;
+}
+  
+/* Estilos para las secciones de contenido */
+section {
+    height: 100vh; /* Ocupa toda la ventana */
+    display: flex; /* Coloca el h1 y el article uno al lado del otro */
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    color: white;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+/* Asegura que h1 y article ocupen el 50% cada uno */
+section h1, 
+section article {
+    flex: 1; /* Cada uno ocupa el 50% */
+    text-align: center; /* Centra el contenido dentro de cada columna */
+    padding: 10px;
+}
+
+section h1 {
+    font-size: 2em; /* Tamaño de fuente del título */
+}
+
+section article {
+    padding: 20px;
+}
+
+/* Ajustes para la lista */
+ul {
+    width: 200px; /* Ajusta el ancho del contenedor ul o li */
+}
+
+/* Ajustes para los elementos de lista */
+ul li {
+    padding-left: 5px; /* Ajusta el espacio entre el punto y el contenido del li */
+    margin: 5px 0; /* Ajusta el margen entre los elementos de la lista */
+    
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    text-align: justify;
+    display: block; /* Hace que el enlace se comporte como un bloque */
+    width: 100%;
+}
+
+
