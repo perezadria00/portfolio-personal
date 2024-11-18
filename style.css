@@ -6,135 +6,136 @@ body, html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  height: 100%; /* Asegurar que ocupe toda la pantalla */
 }
 
 body {
   font-family: 'Poppins', sans-serif; /* Fuente moderna */
-  background-color: #e0f2f1; /* Fondo verde suave */
-  min-height: 100vh;
+  background: linear-gradient(135deg, #4CAF50, #81C784); /* Fondo degradado */
   display: flex;
   flex-direction: column;
-  font-size: 28px; /* Fuente base más grande */
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: white; /* Texto blanco para contraste */
+  text-align: center; /* Centrar texto */
 }
 
 /* Header */
 header {
   text-align: center;
-  background-color: #4CAF50; /* Verde principal */
+  background: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
   color: white;
-  padding: 6rem; /* Más espacio */
+  padding: 2rem;
+  width: 100%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px); /* Efecto difuminado */
 }
 
 header h1 {
   margin: 0;
-  font-size: 5rem; /* Título más grande */
+  font-size: 3rem; /* Título más grande */
   font-weight: 700;
 }
 
 header p {
   margin: 1rem 0 0;
-  font-size: 2.5rem; /* Subtítulo más grande */
+  font-size: 1.5rem; /* Subtítulo */
 }
 
 /* Main */
 main {
   flex: 1;
-  padding: 8rem 3rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  padding: 2rem;
 }
 
 /* Grid principal */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, minmax(400px, 1fr)); /* Recuadros más anchos */
-  gap: 8rem; /* Mayor separación entre los recuadros */
-  max-width: 2200px; /* Más ancho total */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
   width: 100%;
-  animation: fadeIn 1.5s ease;
 }
 
+/* Recuadros */
 .grid-item {
-  background-color: #e8f5e9; /* Verde claro */
-  color: #2e7d32; /* Verde oscuro */
-  text-align: center;
-  padding: 8rem 6rem; /* Más espacio dentro de los recuadros */
-  border-radius: 25px;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.2); /* Fondo translúcido */
+  border-radius: 15px;
+  padding: 3rem 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-decoration: none; /* Quitar subrayado de enlaces */
+  color: white;
+  text-align: center; /* Centrar texto */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 
 .grid-item:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* Iconos (Font Awesome) */
 .icon {
-  margin-bottom: 2rem;
-  color: #4CAF50;
-  font-size: 8rem; /* Tamaño más grande de los íconos */
+  margin-bottom: 1.5rem;
+  font-size: 4rem; /* Tamaño grande */
+  color: #ffffff;
 }
 
-/* Títulos y Descripciones */
+/* Títulos y descripciones */
 .grid-item h2 {
-  font-weight: 700;
-  font-size: 4rem; /* Títulos más grandes */
-  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 .grid-item p {
-  font-weight: 300;
-  font-size: 2.5rem; /* Texto descriptivo más grande */
-  line-height: 3.5rem; /* Espaciado entre líneas */
+  font-size: 1.2rem;
+  line-height: 1.8rem;
 }
 
 /* Footer */
 footer {
   text-align: center;
-  background-color: #4CAF50; /* Verde principal */
+  padding: 1.5rem;
+  font-size: 1rem;
+  background: rgba(0, 0, 0, 0.5);
   color: white;
-  padding: 5rem; /* Más espacio */
-  font-size: 2.5rem; /* Texto más grande */
-  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Animación de entrada */
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 1.5s forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
+  width: 100%;
 }
 
 /* Diseño responsivo */
 @media (max-width: 768px) {
-  .grid-container {
-    grid-template-columns: 1fr; /* Una sola columna */
-    gap: 4rem; /* Espacio más pequeño entre recuadros */
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1.2rem;
   }
 
   .grid-item {
-    padding: 4rem 3rem; /* Reducir ligeramente el padding */
+    padding: 2rem 1.5rem;
   }
 
   .grid-item h2 {
-    font-size: 3rem; /* Ajustar el título */
+    font-size: 1.8rem;
   }
 
   .grid-item p {
-    font-size: 2rem; /* Reducir el texto descriptivo */
-    line-height: 2.5rem;
+    font-size: 1rem;
   }
 
   footer {
-    font-size: 2rem; /* Reducir texto del footer */
+    font-size: 0.8rem;
   }
 }
