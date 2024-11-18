@@ -1,0 +1,140 @@
+/* Importar fuente desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Reseteo básico */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif; /* Fuente moderna */
+  background-color: #e0f2f1; /* Fondo verde suave */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 28px; /* Fuente base más grande */
+}
+
+/* Header */
+header {
+  text-align: center;
+  background-color: #4CAF50; /* Verde principal */
+  color: white;
+  padding: 6rem; /* Más espacio */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 5rem; /* Título más grande */
+  font-weight: 700;
+}
+
+header p {
+  margin: 1rem 0 0;
+  font-size: 2.5rem; /* Subtítulo más grande */
+}
+
+/* Main */
+main {
+  flex: 1;
+  padding: 8rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Grid principal */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(400px, 1fr)); /* Recuadros más anchos */
+  gap: 8rem; /* Mayor separación entre los recuadros */
+  max-width: 2200px; /* Más ancho total */
+  width: 100%;
+  animation: fadeIn 1.5s ease;
+}
+
+.grid-item {
+  background-color: #e8f5e9; /* Verde claro */
+  color: #2e7d32; /* Verde oscuro */
+  text-align: center;
+  padding: 8rem 6rem; /* Más espacio dentro de los recuadros */
+  border-radius: 25px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none; /* Quitar subrayado de enlaces */
+}
+
+.grid-item:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Iconos (Font Awesome) */
+.icon {
+  margin-bottom: 2rem;
+  color: #4CAF50;
+  font-size: 8rem; /* Tamaño más grande de los íconos */
+}
+
+/* Títulos y Descripciones */
+.grid-item h2 {
+  font-weight: 700;
+  font-size: 4rem; /* Títulos más grandes */
+  margin-bottom: 2rem;
+}
+
+.grid-item p {
+  font-weight: 300;
+  font-size: 2.5rem; /* Texto descriptivo más grande */
+  line-height: 3.5rem; /* Espaciado entre líneas */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #4CAF50; /* Verde principal */
+  color: white;
+  padding: 5rem; /* Más espacio */
+  font-size: 2.5rem; /* Texto más grande */
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Animación de entrada */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Una sola columna */
+    gap: 4rem; /* Espacio más pequeño entre recuadros */
+  }
+
+  .grid-item {
+    padding: 4rem 3rem; /* Reducir ligeramente el padding */
+  }
+
+  .grid-item h2 {
+    font-size: 3rem; /* Ajustar el título */
+  }
+
+  .grid-item p {
+    font-size: 2rem; /* Reducir el texto descriptivo */
+    line-height: 2.5rem;
+  }
+
+  footer {
+    font-size: 2rem; /* Reducir texto del footer */
+  }
+}
