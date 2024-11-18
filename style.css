@@ -43,6 +43,31 @@ header p {
   font-size: 1.5rem; /* Subtítulo */
 }
 
+/* Navegación */
+nav ul {
+  list-style: none; /* Quitar puntos */
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white; /* Letras blancas */
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.2); /* Fondo translúcido */
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.05); /* Efecto hover */
+}
+
 /* Main */
 main {
   flex: 1;
@@ -54,53 +79,37 @@ main {
   padding: 2rem;
 }
 
-/* Grid principal */
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  width: 100%;
-}
-
-/* Recuadros */
-.grid-item {
+.content {
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: justify; /* Justificar texto */
+  line-height: 1.8rem;
   background: rgba(255, 255, 255, 0.2); /* Fondo translúcido */
-  border-radius: 15px;
-  padding: 3rem 2rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   color: white;
-  text-align: center; /* Centrar texto */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
 }
 
-.grid-item:hover {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+.content img {
+  display: block;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
 }
 
-/* Iconos (Font Awesome) */
-.icon {
-  margin-bottom: 1.5rem;
-  font-size: 4rem; /* Tamaño grande */
-  color: #ffffff;
-}
-
-/* Títulos y descripciones */
-.grid-item h2 {
+.content h2 {
   font-size: 2rem;
   font-weight: 600;
+  text-align: center;
   margin-bottom: 1rem;
 }
 
-.grid-item p {
+.content p {
   font-size: 1.2rem;
-  line-height: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: white;
 }
 
 /* Footer */
@@ -123,15 +132,20 @@ footer {
     font-size: 1.2rem;
   }
 
-  .grid-item {
-    padding: 2rem 1.5rem;
+  nav ul li a {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
   }
 
-  .grid-item h2 {
+  .content {
+    padding: 1.5rem;
+  }
+
+  .content h2 {
     font-size: 1.8rem;
   }
 
-  .grid-item p {
+  .content p {
     font-size: 1rem;
   }
 
